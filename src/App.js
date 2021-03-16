@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+// local components
+import Dog from './components/Dog'
+import Not from './components/Not'
+
+// hooks imports
+import { useState } from 'react'
+
+// local style
 import './App.css';
+import { styles } from './styles'
+
+// external style
+import { Card, Layout } from 'antd'
+const { Header, Content } = Layout
+
+
 
 function App() {
+  const [showDog, setShowDog] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header style={styles.header}>Dog or Not?</Header>
+      <Content style={styles.content}>
+        <Card style={styles.card} onClick={() => setShowDog(prev => !prev)}>
+          {showDog ? <Dog /> : <Not />}
+        </Card>
+      </Content>
     </div>
   );
 }
