@@ -1,8 +1,9 @@
-import React from 'react'
+import not from '../images/not.png'
+import { styles } from '../styles'
 
 function Not() {
     return (
-        <div>not</div>
+        <img src={not} alt='rainbow frowny face' style={styles.mainPic} />
     )
 }
 

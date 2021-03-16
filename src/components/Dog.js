@@ -1,6 +1,9 @@
+import dog from '../images/dog.png'
+import { styles } from '../styles'
+
 function Dog() {
     return (
-        <div>dog</div>
+        <img src={dog} alt="My dog, Beany" style={styles.mainPic} />
     )
 }
 
