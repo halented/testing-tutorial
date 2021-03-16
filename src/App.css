@@ -3,3 +3,7 @@
 .App {
   text-align: center;
 }
+
+.ant-card-body {
+  margin: auto;
+}
