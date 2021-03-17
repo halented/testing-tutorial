@@ -1,6 +1,5 @@
 // local components
-import Dog from './components/Dog'
-import Not from './components/Not'
+import Image from './components/Image'
 
 // hooks imports
 import { useState } from 'react'
@@ -38,7 +37,11 @@ function App() {
           title={title}
           onClick={swapStates}
           style={styles.card}>
-          {showDog ? <Dog /> : <Not />}
+          {showDog ?
+            <Image alt='My dog, Beany' showDog={showDog} />
+            :
+            <Image alt='Rainbow frowny face' showDog={showDog} />
+          }
         </Card>
       </Content>
     </div>
