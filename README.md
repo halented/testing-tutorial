@@ -1,17 +1,6 @@
 # Tutorial for Writing Your First React Tests
 
-You can view the blog post associated with this repository on [dev.to](https://google.com).
-
-
----
-title: Writing Your First React Test
-published: false
-description: Always wear your seatbelt. This applies while coding as well -- meaning, you should always add tests!
-tags: react, testing
-cover_image: https://i.imgur.com/Vw4LnDc.jpg
----
-
-Cover image unrelated -- nice to look at though, right? Discovery Park, Seattle, WA. 
+You can view the blog post associated with this repository on [dev.to](https://dev.to/halented/writing-your-first-react-test-jc8).
 
 This post will assume that the reader has a good understanding of the React basics. It will also involve some coding, which you are welcome to code along with. The repository for the starter code can be found [HERE](https://github.com/halented/testing-tutorial). To view the finished product with tests, use the same repository, but switch to the `with-tests` branch.
 
@@ -73,7 +62,7 @@ and which parts are the React Testing Library: `render` and `screen`.
 
 <span style="color:green">And that the answer to that would be...</span> that Jest sneakily adds its methods into the global scope of your `.test.js` files. If you pop a `console.log(global)` into one of your test files and then run it, you can physically see every single method available to you in that space. Be warned, that is a huge console.log you are about to see. But `expect` and `test` are in there. 
 
-At this point, go ahead and run `yarn test` if you haven't already. Our app doesn't have the learn react link, so of course the original test won't work. 
+At this point, go ahead and run `yarn test` if you haven't already. Our app doesn't have the learn react link, so of course the original test won't pass. 
 
 ## Determining What to Test
 
@@ -83,7 +72,7 @@ Now that we've got a taste of what tools `create-react-app` grants us, we can be
 2. **Integrations** - Tests a group of methods or components together, to make sure they work properly in combination. 
 3. **End-to-End** - Begins where the site user would begin and tests the entirety of the available app.
 
->⚠ Which type of test do you think is currently being rendered in `App.test.js`?
+>*⚠ Which type of test do you think is currently being rendered in `App.test.js`?*
 
 I've read differing opinions on which style you should *begin* your testing with, but the one that makes the most sense to me is to write integrations tests. Overall, the prevailing philosophy is to test your app the way that it might be used by a user. So let's take that and look at what our app does. Go ahead and spin up the app from a second terminal using `yarn start`. 
 
