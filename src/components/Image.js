@@ -6,7 +6,6 @@ import { styles } from '../styles'
 function Dog({ alt, showDog }) {
 
     const src = () => {
-        console.log(showDog)
         return showDog ? dog : not
     }
 
